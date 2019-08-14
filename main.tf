@@ -148,6 +148,13 @@ resource "aws_elasticsearch_domain" "default" {
     }
   }
 
+  cognito_options {
+    enabled = var.cognito_enabled
+    identity_pool_id = var.cognito_identity_pool_id
+    role_arn = var.cognito_role_arn
+    user_pool_id = var.cognito_user_pool_id
+  }
+
   node_to_node_encryption {
     enabled = var.node_to_node_encryption_enabled
   }

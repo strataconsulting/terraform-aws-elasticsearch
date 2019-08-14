@@ -228,3 +228,28 @@ variable "node_to_node_encryption_enabled" {
   default     = false
   description = "Whether to enable node-to-node encryption"
 }
+
+variable "cognito_enabled" {
+  type = bool
+  default = false
+  description = "Enable Kibana Cognito Authentication"
+}
+
+variable "cognito_identity_pool_id" {
+  type = string
+  default = ""
+  description = "Cognito Identity Pool ID"
+}
+
+variable "cognito_role_arn" {
+  type = string
+  default = ""
+  description = "Cognito IAM Role ARN"
+}
+
+variable "user_pool_id" {
+  type = string
+  default = ""
+  description = "Cognito User Pool ID"
+}
+
